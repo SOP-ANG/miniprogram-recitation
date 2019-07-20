@@ -1,0 +1,11 @@
+<!--show.wxml-->
+<view class="adv1">
+  <image class='background' src="{{bg}}" mode="aspectFill"></image>
+  <view class="userinfo">
+    <view>{{nickName}} 你已累计打卡 {{times}} 次！</view>
+  </view>
+  <view class="usermotto">
+    <button wx:if="{{!hasClockIn}}" class="user-motto" bindtap='next'>打卡</button>
+    <button wx:else class="user-motto" disabled='true'>今日已打卡</button>
+  </view>
+</view>

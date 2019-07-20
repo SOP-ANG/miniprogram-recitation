@@ -1,0 +1,92 @@
+<view class='adv1'>
+  <image class='background' src="{{bg}}" mode="aspectFill"></image>
+  <form catchsubmit="formSubmit" catchreset="formReset" class="logonForm">
+    <view class="page-body">
+
+      <view class="weui-cells__title">就读学校所在行政区</view>
+      <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__hd">
+            <view class="weui-label">已选</view>
+          </view>
+          <view class="weui-cell__bd">
+            <picker bindchange="bindPickerChangeDistrict" value="{{index_district}}" range="{{array_district}}">
+              <view class="weui-input" name="district">{{array_district[index_district]}}</view>
+            </picker>
+          </view>
+        </view>
+      </view>
+
+      <view class="weui-cells__title">就读学校</view>
+      <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__hd">
+            <view class="weui-label">已选</view>
+          </view>
+          <view class="weui-cell__bd">
+            <picker wx:if="{{index_district==0}}" bindchange="bindPickerChangeSchool" value="{{index_school}}" range="{{wh_school}}">
+              <view class="weui-input" name="school">{{wh_school[index_school]}}</view>
+            </picker>
+            <picker wx:elif="{{index_district==1}}" bindchange="bindPickerChangeSchool" value="{{index_school}}" range="{{pl_school}}">
+              <view class="weui-input" name="school">{{pl_school[index_school]}}</view>
+            </picker>
+            <picker wx:elif="{{index_district==2}}" bindchange="bindPickerChangeSchool" value="{{index_school}}" range="{{gd_school}}">
+              <view class="weui-input" name="school">{{gd_school[index_school]}}</view>
+            </picker>
+            <picker wx:elif="{{index_district==3}}" bindchange="bindPickerChangeSchool" value="{{index_school}}" range="{{xs_school}}">
+              <view class="weui-input" name="school">{{xs_school[index_school]}}</view>
+            </picker>
+            <picker wx:elif="{{index_district==4}}" bindchange="bindPickerChangeSchool" value="{{index_school}}" range="{{cg_school}}">
+              <view class="weui-input" name="school">{{cg_school[index_school]}}</view>
+            </picker>
+            <picker wx:elif="{{index_district==5}}" bindchange="bindPickerChangeSchool" value="{{index_school}}" range="{{gx_school}}">
+              <view class="weui-input" name="school">{{gx_school[index_school]}}</view>
+            </picker>
+            <picker wx:elif="{{index_district==6}}" bindchange="bindPickerChangeSchool" value="{{index_school}}" range="{{jk_school}}">
+              <view class="weui-input" name="school">{{jk_school[index_school]}}</view>
+            </picker>
+            <picker wx:elif="{{index_district==7}}" bindchange="bindPickerChangeSchool" value="{{index_school}}" range="{{dj_school}}">
+              <view class="weui-input" name="school">{{dj_school[index_school]}}</view>
+            </picker>
+          </view>
+        </view>
+      </view>
+
+      <view wx:if="{{(index_district==0&&index_school==29)||(index_district==1&&index_school==25)||(index_district==2&&index_school==56)||(index_district==3&&index_school==23)||(index_district==4&&index_school==3)||(index_district==5&&index_school==3)||(index_district==6&&index_school==1)||(index_district==7&&index_school==2)}}" class="weui-cells__title">录入学校</view>
+      <view wx:if="{{(index_district==0&&index_school==29)||(index_district==1&&index_school==25)||(index_district==2&&index_school==56)||(index_district==3&&index_school==23)||(index_district==4&&index_school==3)||(index_district==5&&index_school==3)||(index_district==6&&index_school==1)||(index_district==7&&index_school==2)}}" class="weui-cells weui-cells_after-title">
+        <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__bd">
+            <input class="weui-input" name="inputSchool" placeholder="就读学校" required="true" />
+          </view>
+        </view>
+      </view>
+
+      <view class="weui-cells__title">年级</view>
+      <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__hd">
+            <view class="weui-label">已选</view>
+          </view>
+          <view class="weui-cell__bd">
+            <picker bindchange="bindPickerChangeGrade" value="{{index_grade}}" range="{{array_grade}}">
+              <view class="weui-input" name="grade">{{array_grade[index_grade]}}</view>
+            </picker>
+          </view>
+        </view>
+      </view>
+
+      <view class="weui-cells__title">昵称</view>
+      <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__bd">
+            <input class="weui-input" name="nickName" placeholder="昵称" required="true" />
+          </view>
+        </view>
+      </view>
+
+      <view class="btn-area">
+        <button type="primary" formType="submit" class="goodbutton">提交</button>
+      </view>
+    </view>
+  </form>
+</view>

@@ -1,0 +1,22 @@
+const domain = 'http://localhost:port'; // 替换
+const urlList = {
+  // 登录凭证校验接口
+  userValidateWxLoginUrl: domain + '/user/validateWxLogin',
+  // 注册补充信息接口
+  userRegisterUrl: domain + '/user/register',
+  // 获取“年级”对应的课文列表接口
+  clockInGetCourseListUrl: domain + '/clockIn/getCourseList',
+  // 上传音频接口
+  clockInUpRecordUrl: domain + '/clockIn/upRecord',
+  // 打卡成功记录打卡成功接口（分享朋友圈成功后）
+  clockInDoneUrl: domain + '/clockIn/clockInDone',
+  // 启动活动介绍图片1
+  imagesIndexBg1Url: domain + '/static/images/index_bg1.jpg',
+  // 启动活动介绍图片2
+  imagesIndexBg2Url: domain + '/static/images/index_bg2.jpg',
+  // 默认背景图片
+  imagesAllBgUrl: domain + '/static/images/all_bg.jpg',
+  // 用于分享的背景图片
+  imagesShareImgUrl: domain + '/static/images/share-img.jpg',
+}
+module.exports = urlList;

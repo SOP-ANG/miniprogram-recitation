@@ -1,0 +1,61 @@
+/**show.wxss**/
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 110px;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  display: flex;
+  justify-content: center;
+  margin-top: 180px;
+  }
+.background {
+  width: 100%;
+  height: 100%;
+  position:fixed; 
+  background-size:100% 100%;
+  z-index: -1;
+}
+.adv1{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+}
+.goodbutton {
+  margin-top: 30px;
+  width: 400rpx;
+  background-color: rgb(252, 126, 67);
+  color: white;
+  border-radius: 98rpx;
+  background: bg_red;
+}
+
+/* 按下变颜色 */
+
+.hover {
+  background:  rgb(236, 179, 156);
+}
+
+.user-motto {
+  margin-top: 30px;
+  width: 400rpx;
+  background-color: rgb(252, 126, 67);
+  color: white;
+  border-radius: 98rpx;
+  background: bg_red;
+}

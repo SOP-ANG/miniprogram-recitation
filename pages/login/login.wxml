@@ -1,0 +1,13 @@
+<!--login.wxml-->
+<view class="adv1">
+  <image class='background' src="{{bg}}" mode="aspectFill"></image>
+  <view class="userinfo">
+    <block>
+      <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+    </block>
+  </view>
+  <view class="usermotto">
+    <button wx:if="{{!hasUserInfo}}" class="goodbutton" open-type='getUserInfo' bindgetuserinfo='getUserInfo' type='primary'>微信授权</button>
+    <button wx:else class="goodbutton" bindtap='next'>开始打卡</button>
+  </view>
+</view>

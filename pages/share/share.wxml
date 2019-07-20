@@ -1,0 +1,11 @@
+<view class='container'>
+  <view class="mainContent">
+    <canvas-share bindclose="close" userInfo="{{userInfo}}" visible="{{visible}}" />
+    <view class="userInfo">
+      <view class='userinfo-nickname'></view>
+    </view>
+    <view class="foot">
+      <button bindtap='show' class="user-motto">分享成果完成打卡</button>
+    </view>
+  </view>
+</view>

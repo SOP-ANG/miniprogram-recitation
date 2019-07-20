@@ -1,0 +1,15 @@
+<view class="adv1">
+  <scroll-view scroll-y="true" bindscroll="scrollTopFun">
+  <view wx:for="{{objectArray}}" class='app-my-list' catchtap='goVoicePage' data-bean="{{item}}">
+
+    <view class='app-list-l'>
+      <text>{{item.title}}</text>
+    </view>
+
+    <view class='app-list-r'>
+      <image wx:if="{{!item.done}}" src='/img/right.png' class='appp-list-r'></image>
+      <image wx:else src='/img/check.png' class='appp-list-r'></image>
+    </view>
+  </view>
+  </scroll-view>
+</view>
