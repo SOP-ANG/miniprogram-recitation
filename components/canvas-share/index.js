@@ -129,7 +129,7 @@ Component({
                 console.log(json)
                 app.globalData.backuser.hasClockIn = true
                 that.triggerEvent('close')
-                if (json.clockInTimes >= 14) {
+                if (json.data.clockInTimes >= 14) {
                   wx.showModal({
                     title: '提示',
                     content: '您的打卡次数已经符合参加下一阶段的“集赞活动”，点按确定后为您呈现“集赞活动说明”。',
