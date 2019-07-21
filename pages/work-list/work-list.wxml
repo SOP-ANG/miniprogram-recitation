@@ -1,0 +1,22 @@
+<view class="adv1">
+  <scroll-view scroll-y="true" bindscroll="scrollTopFun">
+  <view wx:for="{{objectArray}}" class='app-my-list'>
+
+    <view catchtap='viewDetail' data-bean="{{item}}" class='app-list-l'>
+      <text>{{item.workNameDisplay}}</text>
+      <view>
+        <button class="mini-btn" type="primary" plain="true">查看简介</button>
+      </view>
+    </view>
+    
+    <view class='app-list-r preview-img-v'>
+      <image class="preview-img" src='{{rootUrl}}{{item.imgPath}}' data-src='{{rootUrl}}{{item.imgPath}}' bindtap="previewImage"></image>
+    </view>
+
+    <view catchtap='giveThumbsUp' data-bean="{{item}}" class='app-list-r thumbsup-img-v'>
+      <image class="thumbsup-img" src='/img/thumbsup.png'></image>
+      <text class="thumbsup-count"> {{item.thumbsUpCount}}</text>
+    </view>
+  </view>
+  </scroll-view>
+</view>

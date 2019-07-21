@@ -6,8 +6,11 @@
       <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
     </block>
   </view>
+  <view class="usermottoprimary">
+    <button wx:if="{{!hasUserInfo}}" class="goodbuttonprimary" open-type='getUserInfo' bindgetuserinfo='getUserInfo' type='primary'>微信授权</button>
+    <button wx:else class="goodbuttonprimary" bindtap='next' type='primary'>开始打卡</button>
+  </view>
   <view class="usermotto">
-    <button wx:if="{{!hasUserInfo}}" class="goodbutton" open-type='getUserInfo' bindgetuserinfo='getUserInfo' type='primary'>微信授权</button>
-    <button wx:else class="goodbutton" bindtap='next'>开始打卡</button>
+    <button wx:if="{{hasUserInfo && (isWorkTime || ignoreTs == 'yes')}}" class="goodbutton" bindtap='viewWorkList'>查看集赞活动</button>
   </view>
 </view>

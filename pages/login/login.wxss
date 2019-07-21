@@ -17,10 +17,14 @@
   color: #aaa;
 }
 
+.usermottoprimary {
+  display: flex;
+  justify-content: center;
+  margin-top: 160px;
+  }
 .usermotto {
   display: flex;
   justify-content: center;
-  margin-top: 180px;
   }
 .background {
   width: 100%;
@@ -36,8 +40,17 @@
   height: 100%;
   background-size: contain;
 }
-.goodbutton {
+.goodbuttonprimary {
   margin-top: 30px;
+  width: 400rpx;
+  background-color: rgb(252, 126, 67);
+  color: white;
+  border-radius: 98rpx;
+  background: bg_red;
+}
+
+.goodbutton {
+  margin-top: 2px;
   width: 400rpx;
   background-color: rgb(252, 126, 67);
   color: white;

@@ -129,9 +129,24 @@ Component({
                 console.log(json)
                 app.globalData.backuser.hasClockIn = true
                 that.triggerEvent('close')
-                wx.redirectTo({
-                  url: '/pages/show/show',
-                })
+                if (json.clockInTimes >= 14) {
+                  wx.showModal({
+                    title: '提示',
+                    content: '您的打卡次数已经符合参加下一阶段的“集赞活动”，点按确定后为您呈现“集赞活动说明”。',
+                    showCancel: false,
+                    success: function (resbtn) {
+                      if (resbtn.confirm) {
+                        wx.redirectTo({
+                          url: '/pages/work/work',
+                        })
+                      }
+                    }
+                  })
+                } else {
+                  wx.redirectTo({
+                    url: '/pages/show/show',
+                  })
+                }
               } else {
                 wx.showToast({
                   title: '请求失败！',

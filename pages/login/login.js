@@ -10,6 +10,8 @@ Page({
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
     visible: false,
     bg: urlList.imagesAllBgUrl,
+    ignoreTs: 'no',
+    isWorkTime: false
   },
   //事件处理函数
   show: function () {
@@ -68,12 +70,14 @@ Page({
               "content-type": "application/json"
             },
             success: function (res) {
-
+              var nowTs = Date.parse(new Date())
               console.log(that.data)
               var json = JSON.parse(JSON.stringify(res.data))
               if (json.status == "success") {
                 that.setData({
-                  hasUserInfo: true
+                  hasUserInfo: true,
+                  ignoreTs: json.data.ignoreTs,
+                  isWorkTime: Boolean(nowTs >= 1567267200000),
                 })
                 console.log(json)
                 app.globalData.backuser = json.data
@@ -118,5 +122,10 @@ Page({
         url: '/pages/logon/logon'
       })
     }
+  },
+  viewWorkList: function () {
+    wx.redirectTo({
+      url: '/pages/work-list/work-list'
+    })
   },
 })

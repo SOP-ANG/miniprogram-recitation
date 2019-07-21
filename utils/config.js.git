@@ -1,5 +1,7 @@
 const domain = 'http://localhost:port'; // 替换
 const urlList = {
+  // 根路径
+  rootUrl: domain + '/',
   // 登录凭证校验接口
   userValidateWxLoginUrl: domain + '/user/validateWxLogin',
   // 注册补充信息接口
@@ -10,6 +12,12 @@ const urlList = {
   clockInUpRecordUrl: domain + '/clockIn/upRecord',
   // 打卡成功记录打卡成功接口（分享朋友圈成功后）
   clockInDoneUrl: domain + '/clockIn/clockInDone',
+  // 上传集赞作品接口
+  collectThumbsUpCreateUrl: domain + '/collectThumbsUp/create',
+  // 获取集赞列表接口
+  collectThumbsUpGetListUrl: domain + '/collectThumbsUp/getList',
+  // 点赞接口
+  collectThumbsUpGiveUrl: domain + '/collectThumbsUp/give',
   // 启动活动介绍图片1
   imagesIndexBg1Url: domain + '/static/images/index_bg1.jpg',
   // 启动活动介绍图片2
@@ -18,5 +26,7 @@ const urlList = {
   imagesAllBgUrl: domain + '/static/images/all_bg.jpg',
   // 用于分享的背景图片
   imagesShareImgUrl: domain + '/static/images/share-img.jpg',
+  // 集赞活动说明图片
+  imagesCollectInfoUrl: domain + '/static/images/collect_info.jpg',
 }
 module.exports = urlList;

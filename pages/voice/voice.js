@@ -216,7 +216,7 @@ Page({
   //上传录音
   upload: function() {
     var that = this
-    if(that.data.recordTime>=60){
+    if (that.data.recordTime >= 60) {
     wx.uploadFile({
       url: urlList.clockInUpRecordUrl, //演示域名、自行配置
       filePath: this.tempFilePath,

@@ -1,0 +1,7 @@
+<!--work.wxml-->
+<view class="adv1">
+  <image class='description' src="{{bg}}" mode="cover"></image>
+  <view class="usermotto">
+    <button class="goodbutton" bindtap='participate' type='primary'>参与活动</button>
+  </view>
+</view>

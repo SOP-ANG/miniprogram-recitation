@@ -1,0 +1,103 @@
+/* 个人中心list  WXSS*/
+@import "/common/lib/weui.wxss";
+.app-my-list {
+  width: 100%;
+  height: 160rpx;
+  font-size: 32rpx;
+  display: flex;
+  justify-content: space-between;
+  padding: 50rpx 0rpx 50rpx 20rpx;
+  background-color: #f7f7f7;
+  color: #1d1507;
+  align-items: center;
+  box-sizing: border-box;
+  margin-bottom: 35rpx;
+}
+
+/* 右箭头 */
+
+.app-rightIcon {
+  width: 10rpx;
+  height: 18rpx;
+  margin-left: 15rpx;
+}
+
+.app-list-l {
+  width: 50%;
+}
+
+.app-list-l image {
+  width: 40rpx;
+  height: 40rpx;
+  vertical-align: middle;
+  margin-right: 15rpx;
+}
+
+.app-list-l text {
+  vertical-align: middle;
+}
+
+.app-list-r {
+
+}
+
+.preview-img-v {
+  width: 30%;
+}
+
+.preview-img {
+  width: 130rpx;
+  height: 130rpx;
+  margin-top: 10rpx;
+  margin-left: 70rpx;
+}
+
+.thumbsup-img-v {
+  width: 20%;
+}
+
+.thumbsup-img {
+  width: 30rpx;
+  height: 30rpx;
+  margin-left: 30rpx;
+}
+
+.thumbsup-count {
+  word-wrap: break-word;
+}
+
+.background {
+  width: 100%;
+  height: 100%;
+  position:fixed; 
+  background-size:100% 100%;
+  z-index: -1;
+}
+.adv1{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+}
+.goodbutton {
+  margin-top: 30px;
+  width: 400rpx;
+  background-color: rgb(252, 126, 67);
+  color: white;
+  border-radius: 98rpx;
+  background: bg_red;
+}
+
+/* 按下变颜色 */
+
+.hover {
+  background:  rgb(236, 179, 156);
+}
+
+.mini-btn{
+  display: inline-block;
+  line-height: 1.5;
+  font-size: 10px;
+  margin-top: 20rpx;
+}

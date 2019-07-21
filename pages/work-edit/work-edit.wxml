@@ -1,0 +1,43 @@
+<view class='adv1'>
+  <image class='background' src="{{bg}}" mode="aspectFill"></image>
+  <form catchsubmit="formSubmit" catchreset="formReset" class="uploadForm">
+    <view class="page-body">
+      <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell work-cell_input">
+          <view class="weui-cell__bd">
+            <input class="weui-input" auto-focus name="workName" placeholder="参赛作品名" />
+          </view>
+        </view>
+      </view>
+      <view class="page-section">
+        <view class="textarea-wrp">
+          <textarea style="height: 9em" name="workProfile" placeholder="作品简介" maxlength='10000'/>
+        </view>
+      </view>
+      
+      <view class="weui-cells">
+        <view class="weui-cell">
+          <view class="weui-cell__bd">
+            <view class="weui-uploader">
+              <view class="weui-uploader__bd">
+                <view class="weui-uploader__files">
+                  <block wx:for="{{imageList}}" wx:for-item="image">
+                    <view class="weui-uploader__file">
+                      <image class="weui-uploader__img" src="{{image}}" data-src="{{image}}" bindtap="previewImage"></image>
+                    </view>
+                  </block>
+                </view>
+                <view class="weui-uploader__input-box">
+                  <view class="weui-uploader__input" bindtap="chooseImage"></view>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view>
+        <button type="primary" formType="submit" class="goodbutton">上传</button>
+      </view>
+    </view>
+  </form>
+</view>

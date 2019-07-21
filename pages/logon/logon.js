@@ -16,7 +16,7 @@ Page({
     index_district: 0,
     index_school: 0,
     index_grade: 0,
-    userInfo: '',
+    userInfo: {},
     bg: urlList.imagesAllBgUrl,
   },
   onLoad: function(options) {
