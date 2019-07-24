@@ -2,5 +2,5 @@
   <image wx:if="{{page==1}}" src="{{picture1}}" class='adv-img' bindtouchstart="touchStart" bindtouchmove="touchMove" bindtouchend="touchEnd" animation="{{ani1}}"></image>
   <image wx:if="{{page==2}}" src="{{picture2}}" class='adv-img' bindtouchstart="touchStart" bindtouchmove="touchMove" bindtouchend="touchEnd" animation="{{ani2}}"></image>
 
-  <view wx:if="{{page==2}}" class='tiaoguo' bindtap='goto' style="opacity:0.5">开始报名</view>
+  <button wx:if="{{page==2}}" class='tiaoguo' bindtap='goto' type="primary">开始报名</button>
 </view>
